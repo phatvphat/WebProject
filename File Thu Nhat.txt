@@ -13,3 +13,5 @@ giai quyet xung dot file 1.
 Noi dung File Git GUI.
 
 Tao conflict 2 o main.
+Tao conflict 2 o NhanVienC.
+Da giai quyet conflict 2.
