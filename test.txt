@@ -4,3 +4,5 @@ lai them noi dung test.
 
 tao xung dot 2.
 tao ra xung dot 1.
+
+thay doi noi dung cho git gui.
