@@ -1,0 +1,277 @@
+﻿
+@{
+    ViewBag.Title = "Shop";
+    var listProducts = (List<products>)ViewData["listProducts"];
+    var listPT = (List<product_types>)ViewData["listPT"];
+    int page = (int)ViewData["page"];
+    var endPage = Math.Ceiling((decimal)(int)ViewData["totalProducts"] / Func.DATA_PER_PAGE);
+    Func f = new Func();
+    string productTypeName = "Loại sản phẩm";
+    product_types productType = listPT.Where(w => w.product_type_id == ViewBag.productTypeId).DefaultIfEmpty(new product_types { product_type_id = 0, product_type_name = "Loại sản phẩm" }).SingleOrDefault();
+    productTypeName = productType.product_type_name;
+}
+
+<!-- Breadcrumb section start -->
+<section class="breadcrumb-section section-b-space">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3>Danh sách sản phẩm</h3>
+                <nav>
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="~/Home">
+                                <i class="fas fa-home"></i>
+                            </a>
+                        </li>
+                        <li class="breadcrumb-item active" aria-current="page">Danh sách sản phẩm</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Breadcrumb section end -->
+<!-- Shop Section start -->
+<section class="section-b-space">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-12 ratio_30">
+                <div class="banner-deatils">
+                    <div class="banner-image">
+                        <img src="~/Content/images/banner2.jpg" class="img-fluid bg-img blur-up lazyload"
+                             alt="">
+                        <div class="banner-content">
+                            <div>
+                                <h3>Shop The Latest Trends</h3>
+                                <p>From out latest collection.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="banner-contain mt-3 mb-5">
+                        @*<p class="font-light">
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. It has survived not only five centuries, but also the leap into electronic
+                                typesetting, remaining essentially unchanged.
+                            </p>*@
+                    </div>
+                </div>
+                <div class="row g-4">
+                    <!-- label and featured section -->
+                    <div class="col-12">
+                        <div class="filter-options">
+                            <div class="select-options">
+                                <div class="page-view-filter">
+                                    <div class="dropdown select-featured">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">
+                                            @ViewData["orderBy"]
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                                <li>
+                                                    <a class="dropdown-item" href="javascript:void(0)" onclick="redirectParams('order_by', 1)">Mới cập nhật</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="javascript:void(0)" onclick="redirectParams('order_by', 2)">Giá thấp đến cao</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" href="javascript:void(0)" onclick="redirectParams('order_by', 3)">Giá cao đến thấp</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="dropdown select-featured">
+                                        <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
+                                                data-bs-toggle="dropdown" aria-expanded="false">@productTypeName
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            @foreach (var item in listPT)
+                                            {
+                                                <li>
+                                                    <a class="dropdown-item" href="javascript:void(0)" onclick="redirectParams('product_type_id', @item.product_type_id)">@item.product_type_name</a>
+                                                </li>
+                                            }
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="grid-options d-sm-inline-block d-none">
+                                    <ul class="d-flex">
+                                        <li class="two-grid">
+                                            <a href="javascript:void(0)">
+                                                <img src="~/Content/svg/grid-2.svg" class="img-fluid blur-up lazyload"
+                                                     alt="">
+                                            </a>
+                                        </li>
+                                        <li class="three-grid d-md-inline-block d-none">
+                                            <a href="javascript:void(0)">
+                                                <img src="~/Content/svg/grid-3.svg" class="img-fluid blur-up lazyload"
+                                                     alt="">
+                                            </a>
+                                        </li>
+                                        <li class="grid-btn d-lg-inline-block d-none">
+                                            <a href="javascript:void(0)">
+                                                <img src="~/Content/svg/grid.svg" class="img-fluid blur-up lazyload"
+                                                     alt="">
+                                            </a>
+                                        </li>
+                                        <li class="five-grid active d-xl-inline-block d-none">
+                                            <a href="javascript:void(0)">
+                                                <img src="~/Content/svg/grid-5.svg" class="img-fluid blur-up lazyload"
+                                                     alt="">
+                                            </a>
+                                        </li>
+                                        <!--<li class="list-btn">
+                                            <a href="javascript:void(0)">
+                                                <img src="~/Content/svg/list.svg" class="img-fluid blur-up lazyload"
+                                                     alt="">
+                                            </a>
+                                        </li>-->
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- label and featured section -->
+                    <!-- Prodcut setion -->
+                    @if (listProducts.Count == 0)
+                    {
+                        <section class="page-not-found section-b-space">
+                            <div class="container">
+                                <div class="row gx-md-2 gx-0 gy-md-0 gy-3">
+                                    <div class="col-md-8 m-auto">
+                                        <div class="page-image">
+                                            <img src="~/Content/images/inner-page/404.png" class="img-fluid blur-up lazyload" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-8 mx-auto mt-md-5 mt-3">
+                                        <div class="page-container pass-forgot">
+                                            <div>
+                                                <h2>Không tìm thấy sản phẩm</h2>
+                                                <p>Hãy thử tìm kiếm một từ khoá khác.</p>
+                                                <a href="~/Home" class="btn btn-solid-default">Trang chủ</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    }
+                    <div class="row g-sm-4 g-3 row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-2 gx-sm-4 gx-3 mt-1 custom-gy-5 product-style-2 ratio_asos product-list-section">
+                        @foreach (var item in listProducts)
+                        {
+                            <div>
+                                <div class="product-box">
+                                    <div class="img-wrapper">
+                                        <div class="front">
+                                            <a href="~/Shop/Detail/@item.product_id">
+                                                <img src="@item.product_img"
+                                                     class="bg-img blur-up lazyload" alt="">
+                                            </a>
+                                        </div>
+                                        @*<div class="back">
+                                                <a href="product-left-sidebar.html">
+                                                    <img src="~/Content/images/fashion/product/back/1.jpg"
+                                                         class="bg-img blur-up lazyload" alt="">
+                                                </a>
+                                            </div>*@
+                                        <!--<div class="cart-wrap">
+                                            <ul>
+                                                <li>
+                                                    <a href="javascript:void(0)" class="addtocart-btn"
+                                                       data-bs-toggle="modal" data-bs-target="#addtocart">
+                                                        <i data-feather="shopping-bag"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                       data-bs-target="#quick-view">
+                                                        <i data-feather="eye"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="compare.html">
+                                                        <i data-feather="refresh-cw"></i>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="wishlist.html" class="wishlist">
+                                                        <i data-feather="heart"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>-->
+                                    </div>
+                                    <div class="product-details">
+                                        <div class="rating-details">
+                                            <span class="font-light grid-content">@item.product_types.product_type_name</span>
+                                        </div>
+                                        <div class="main-price">
+                                            <a href="~/Shop/Detail/@item.product_id" class="font-default">
+                                                <h5 class="ms-0">@item.product_name</h5>
+                                            </a>
+                                            <div class="listing-content">
+                                                <span class="font-light">Regular Fit</span>
+                                                <p class="font-light">ABC.</p>
+                                            </div>
+                                            <h3 class="theme-color">@f.NumberToStr(item.product_price)đ</h3>
+                                            <button onclick="location.href = 'cart.html';" class="btn listing-content">Add To Cart</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        <!-- Prodcut setion -->
+                    </div>
+
+                    <nav class="page-section">
+                        <ul class="pagination">
+                            @*<li class="page-item">
+                                <a class="page-link" href="javascript:void(0)" aria-label="Previous">
+                                    <span aria-hidden="true">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                </a>
+                            </li>*@
+                            @for(var i = 1; i <= endPage; i++)
+                            {
+                                string active = "";
+                                if(i == page)
+                                {
+                                    active = "active";
+                                }
+                                if(Math.Abs(page - i) <= 3 || i == 1 || i == endPage)
+                                {
+                                    <li class="page-item @active">
+                                        <a class="page-link" href="javascript:" onclick="redirectParams('page', @i)">@i</a>
+                                    </li>
+                                }
+                            }
+                            @*<li class="page-item">
+                                <a class="page-link" aria-label="Next">
+                                    <span aria-hidden="true">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </li>*@
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Shop Section end -->

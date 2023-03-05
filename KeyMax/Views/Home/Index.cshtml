@@ -1,0 +1,401 @@
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+    var listProducts = (List<products>)ViewData["listProducts"];
+    Func f = new Func();
+}
+
+<!-- home slider start -->
+<section class="home-section home-style-2 pt-0">
+    <div class="container-fluid p-0">
+        <div class="slick-2 dot-dark">
+            <div>
+                <div class="home-slider">
+                    <div class="home-wrap row m-0">
+                        <div class="col-xxl-3 col-lg-4 p-0 d-lg-block d-none">
+                            <div class="home-left-wrapper">
+                                <div>
+                                    <h2>KeyMax</h2>
+                                    @*<div class="d-flex">
+                                            <ul class="rating p-0 me-2">
+                                                <li><i class="fas fa-star theme-color"></i></li>
+                                                <li><i class="fas fa-star theme-color"></i></li>
+                                                <li><i class="fas fa-star theme-color"></i></li>
+                                                <li><i class="fas fa-star theme-color"></i></li>
+                                                <li><i class="fas fa-star theme-color"></i></li>
+                                            </ul>
+                                            <h6 class="text-light">( 5040 Review )</h6>
+                                        </div>*@
+                                    <p>Sản phẩm công nghệ.</p>
+                                    @*<h3>$49.55 <span class="theme-color">$49.55</span></h3>*@
+                                    @*<ul class="selection-wrap">
+                                            <li>
+                                                <div class="dark-select">
+                                                    <select class="form-select">
+                                                        <option selected>Size</option>
+                                                        <option value="1">S</option>
+                                                        <option value="2">M</option>
+                                                        <option value="3">L</option>
+                                                        <option value="4">XL</option>
+                                                    </select>
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dark-select">
+                                                    <select class="form-select">
+                                                        <option selected>Color</option>
+                                                        <option value="1">Black</option>
+                                                        <option value="2">White</option>
+                                                        <option value="3">Blue</option>
+                                                        <option value="4">Gray</option>
+                                                    </select>
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="dark-select">
+                                                    <select class="form-select">
+                                                        <option selected>Qty</option>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                    </select>
+                                                    <i class="fas fa-chevron-down"></i>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="add-btn">
+                                            <a href="cart.html" class="btn btn-white">Add to cart</a>
+                                            <a href="javascript:void:(0)" class="btn btn-solid-default ms-2">
+                                                <i class="fas fa-heart"></i>
+                                            </a>
+                                        </div>*@
+                                    <div class="share-icons">
+                                        <span>share with</span>
+                                        <ul class="share-icons p-0">
+                                            <li>
+                                                <a target="_blank"
+                                                   href="#">
+                                                    <img src="~/Content/images/social-icon/4.png"
+                                                         class="img-fluid blur-up lazyload" alt="social icon">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="~/Content/images/social-icon/5.png"
+                                                         class="img-fluid blur-up lazyload" alt="social icon">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="~/Content/images/social-icon/6.png"
+                                                         class="img-fluid blur-up lazyload" alt="social icon">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-9 col-lg-8 p-0 left-content">
+                            <img src="~/Content/images/Heisenberg_HERO_1950x.jpg" class="bg-img blur-up lazyload" alt="">
+                            <div class="home-content row">
+                                <div class="col-xxl-4 col-lg-4 col-md-4 col-sm-5 col-6">
+                                    @*<h3>Sale <span class="theme-color">70% OFF</span></h3>*@
+                                    <h1 data-animation-in="fadeInUp" style="color: aliceblue;">New Tranding Technology</h1>
+                                    @*<h6 class="mb-4" data-animation-in="fadeInUp" data-delay-in="0.4">BUY ONE GET ONE <span class="theme-color">FREE</span></h6>*@
+                                    <div class="discover-block" data-animation-in="fadeInUp" data-delay-in="0.7">
+                                        <div class="d-flex">
+                                            <a href="javascript:void(0)" class="play-icon theme-bg-color">
+                                                <i class="fas fa-play"></i>
+                                            </a>
+                                            <div class="discover-content" style="color: #eff2f7;">
+                                                <h4 class="mb-1">SHOP</h4>
+                                                <h6 style="color: #eff2f7;">NOW</h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- home slider end -->
+<!-- banner section start -->
+<section class="ratio2_1 banner-style-2">
+    <div class="container">
+        <div class="row gy-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="collection-banner p-bottom p-center text-center">
+                    <a href="javacript:void(0)" class="banner-img">
+                        <img src="~/Content/images/banner/1.jpg" class="bg-img blur-up lazyload" alt="">
+                    </a>
+                    <div class="banner-detail">
+                        <a href="javacript:void(0)" class="heart-wishlist">
+                            <i class="far fa-heart"></i>
+                        </a>
+                        <span class="font-dark-30"><span>up to</span> 25% <span>OFF</span></span>
+                    </div>
+                    <a href="javacript:void(0)" class="contain-banner">
+                        <div class="banner-content with-big">
+                            <h2 class="mb-2">New Keycap</h2>
+                            @*<span>BUY ONE GET ONE FREE</span>*@
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="collection-banner p-bottom p-center text-center">
+                    <a href="javacript:void(0)" class="banner-img">
+                        <img src="~/Content/images/banner/2.jpg" class="bg-img blur-up lazyload" alt="">
+                    </a>
+                    <div class="banner-detail">
+                        <a href="javacript:void(0)" class="heart-wishlist">
+                            <i class="far fa-heart"></i>
+                        </a>
+                        @*<span class="font-dark-30">50% <span>OFF</span></span>*@
+                    </div>
+                    <a href="javacript:void(0)" class="contain-banner">
+                        <div class="banner-content with-big">
+                            <h2 class="mb-2">New Keyboard</h2>
+                            @*<span>New offer 50% off</span>*@
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="collection-banner p-bottom p-center text-center">
+                    <a href="javacript:void(0)" class="banner-img">
+                        <img src="~/Content/images/banner/3.jpg" class="bg-img blur-up lazyload" alt="">
+                    </a>
+                    <div class="banner-detail">
+                        <a href="javacript:void(0)" class="heart-wishlist">
+                            <i class="far fa-heart"></i>
+                        </a>
+                        @*<span class="font-dark-30">36% <span>OFF</span></span>*@
+                    </div>
+                    <a href="javacript:void(0)" class="contain-banner">
+                        <div class="banner-content with-big">
+                            <h2 class="mb-2">New Experience</h2>
+                            @*<span>BUY ONE GET ONE FREE</span>*@
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- banner section end -->
+<!-- product section 2 start -->
+<section class="ratio_asos">
+    <div class="container">
+        <div class="row m-0">
+            <div class="col-sm-12 p-0">
+                <div class="title title-2 text-center">
+                    <h2>Mới cập nhật</h2>
+                    <h5 class="text-color">Our collection</h5>
+                </div>
+                <div class="product-wrapper product-style-2 row g-sm-4 g-3">
+                    @foreach (var item in listProducts)
+                    {
+                        <div class="col-xl-3 col-lg-4 col-6">
+                            <div class="product-box">
+                                <div class="img-wrapper">
+                                    <div class="front">
+                                        <a href="~/Shop/Detail/@item.product_id">
+                                            <img src="@item.product_img" class="bg-img blur-up lazyload" alt="">
+                                        </a>
+                                    </div>
+                                    @*<div class="label-block">
+                                        <span class="label label-black">New</span>
+                                        <span class="label label-theme">50% Off</span>
+                                    </div>*@
+                                    @*<div class="cart-wrap">
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:void(0)" class="addtocart-btn"
+                                                   data-bs-toggle="modal" data-bs-target="#addtocart">
+                                                    <i data-feather="shopping-bag"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:void(0)" data-bs-toggle="modal"
+                                                   data-bs-target="#quick-view">
+                                                    <i data-feather="eye"></i>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>*@
+                                </div>
+                                <div class="product-details">
+                                    <div class="rating-details">
+                                        <span class="font-light grid-content">@item.product_types.product_type_name</span>
+                                        <ul class="rating mt-0">
+                                            @*<li>
+                                                <i class="fas fa-star theme-color"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star theme-color"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star theme-color"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star theme-color"></i>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-star"></i>
+                                            </li>*@
+                                        </ul>
+                                    </div>
+                                    <div class="main-price">
+                                        <a href="~/Shop/Detail/@item.product_id" class="font-default">
+                                            <h5>@item.product_name</h5>
+                                        </a>
+                                        <div class="listing-content">
+                                            <span class="font-light">Jacket</span>
+                                            <p class="font-light">
+                                                Lorem ipsum, dolor sit amet consectetur adipisicing
+                                                elit. Sit, deserunt? Asperiores aliquam voluptatum culpa aliquid ab
+                                                ducimus eaque illum, quibusdam reiciendis id ad consectetur quis, animi
+                                                qui, minus quidem eveniet! Dolorum magnam numquam, asperiores
+                                                accusantium architecto placeat quam officia, tempore repellendus.
+                                            </p>
+                                        </div>
+                                        <h3 class="theme-color">@f.NumberToStr(item.product_price)đ</h3>
+                                        <button class="btn listing-content">Thêm vào giỏ hàng</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- product section 2 end -->
+<!-- Banner section 3 start -->
+<section class="timer-banner-style-2">
+    <div class="container">
+        <div class="row gy-3">
+            <div class="col-lg-12">
+                <div class="discount-image-details discount-spacing">
+                    <img src="~/Content/images/banner.jpg" class="bg-img blur-up lazyload" alt="">
+
+                    <div class="discunt-details">
+                        <div>
+                            <div class="heart-button heart-button-2">
+                                <i class="fas fa-heart theme-color"></i>
+                            </div>
+
+                            @*<h5 class="mt-3">Special Discount <span class="theme-color">70% OFF</span></h5>*@
+                            <h2 class="my-3 deal-text" style="color: mintcream;">Săn Deal Hot <br>chỉ từ <span class="theme-color">500.000đ</span></h2>
+                            <div class="timer-style-2 mt-xl-1 my-2 justify-content-center d-flex">
+                                <ul>
+                                    <li>
+                                        <div class="counter">
+                                            <div><h2 id="days1" class="theme-color"></h2>Ngày</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="counter">
+                                            <div><h2 id="hours1" class="theme-color"></h2>Giờ</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="counter">
+                                            <div><h2 id="minutes1" class="theme-color"></h2>Phút</div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="counter">
+                                            <div><h2 id="seconds1" class="theme-color"></h2>Giây</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <button onclick="location.href = './Shop';" type="button"
+                                    class="btn default-light-theme default-theme mt-2">Shop Now</button>
+
+                            <div class="timer-bg timer-bg-center d-lg-block d-none">
+                                <h3 class="mt-0">Sản phẩm mới nhất</h3>
+                                <span>LIMITED !!!</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Banner section 3 end -->
+<!-- service section start -->
+<section class="service-section service-style-2 section-b-space">
+    <div class="container">
+        <div class="row g-4 g-sm-3">
+            <div class="col-xl-3 col-sm-6">
+                <div class="service-wrap">
+                    <div class="service-icon">
+                        <svg>
+                            <use xlink:href="~/Content/svg/icons.svg#customer"></use>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="mb-2">Customer Servcies</h3>
+                        <span class="font-light">Top notch customer service.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+                <div class="service-wrap">
+                    <div class="service-icon">
+                        <svg>
+                            <use xlink:href="~/Content/svg/icons.svg#shop"></use>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="mb-2">Pickup At Any Store</h3>
+                        <span class="font-light">Free shipping on orders over $65.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+                <div class="service-wrap">
+                    <div class="service-icon">
+                        <svg>
+                            <use xlink:href="~/Content/svg/icons.svg#secure-payment"></use>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="mb-2">Secured Payment</h3>
+                        <span class="font-light">We accept all major credit cards.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-3 col-sm-6">
+                <div class="service-wrap">
+                    <div class="service-icon">
+                        <svg>
+                            <use xlink:href="~/Content/svg/icons.svg#return"></use>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="mb-2">Free Returns</h3>
+                        <span class="font-light">30-days free return policy.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- service section end -->
