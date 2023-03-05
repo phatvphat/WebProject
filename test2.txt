@@ -1,1 +1,3 @@
 thay doi noi dung tao conflict 1 o main.
+tao conflict 1 o NhanVienC.
+da giai quyet conflict 1.
