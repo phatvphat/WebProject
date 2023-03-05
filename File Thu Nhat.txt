@@ -9,3 +9,5 @@ Noi dung cua may tinh 2.
 xung dot tiep file 1.
 tao xung dot file 1.
 giai quyet xung dot file 1.
+
+Noi dung File Git GUI.
